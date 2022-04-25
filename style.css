@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 85px;
+    background-color: #5b7178;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 75px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav .logo {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 1.5px;
+
+}
+
+nav span {
+    color: #8fd1e5;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0px 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+nav ul li a:hover {
+    color: #5b7178;
+    background-color: white;
+
+}
+
+nav ul li .active {
+    color: #5b7178;
+    background: white;
+}
+
+nav .btn i {
+    color: white;
+    cursor: pointer;
+    font-size: 35px;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+.imgs img {
+    width: 100%;
+    height: 60%;
+    opacity: 1;
+}
+
+@media screen and (max-width:940px) {
+    nav .btn i {
+        display: block;
+    }
+
+    nav .logo {
+        font-size: 30px;
+        margin-left: 0;
+
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 85px;
+        left: -100%;
+        background-color: #313d41;
+        text-align: center;
+        display: block;
+        transition: 0.6ss ease;
+
+
+    }
+
+    nav ul li {
+        margin: 45px 0px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        color: #97cddd;
+        background: none;
+
+    }
+
+    nav ul li .active {
+        color: white;
+        background: none;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+    }
+
+    #click:checked~.btn i::before {
+        content: "\f00d";
+    }
+
+}
